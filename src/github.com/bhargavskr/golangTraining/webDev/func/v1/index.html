@@ -1,0 +1,20 @@
+<html>
+    <head><title>New</title></head>
+    <body>
+        <ul>    {{range .}}
+                {{$name := .Name}}
+               
+                <li>{{uc $name}} </li>
+                {{end }}
+
+            </ul>
+          <ul>    {{range .}}
+                 {{$name := .Name}}
+               
+                <li>{{ft $name}}</li>
+                {{end }}
+
+            </ul>
+        
+    </body>
+</html>

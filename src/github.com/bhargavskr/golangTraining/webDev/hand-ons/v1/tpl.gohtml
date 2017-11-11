@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+{{range .}}
+   <h2>{{.AcaYear}}<h2> 
+   <h4>{{if .Fall }} {{.Fall.Term}}{{end}}</h4>
+   {{if .Fall.Courses}}
+   <table>
+    <thead>
+    <tr><th>Course Code</th><th>Course Name </th><th>Units</th></tr>
+    </thead>
+    <tbody>
+        {{range .Fall.Courses}}
+
+            <tr><td>{{.Number}}</td><td>{{.Name}}</td><td>{{.Units}}</td></tr>
+        {{end}}
+    </tbody>
+
+   </table>
+
+   {{end}}
+   <h4>{{if .Spring }} {{.Spring.Term}}{{end}}</h4>
+    {{if .Spring.Courses}}
+   <table>
+    <thead>
+    <tr><th>Course Code</th><th>Course Name </th><th>Units</th></tr>
+    </thead>
+    <tbody>
+        {{range .Spring.Courses}}
+
+            <tr><td>{{.Number}}</td><td>{{.Name}}</td><td>{{.Units}}</td></tr>
+        {{end}}
+    </tbody>
+
+   </table>
+
+   {{end}}
+   <h4>{{if .Summer }} {{.Summer.Term}}{{end}}</h4>
+    {{if .Summer.Courses}}
+   <table>
+    <thead>
+    <tr><th>Course Code</th><th>Course Name </th><th>Units</th></tr>
+    </thead>
+    <tbody>
+        {{range .Summer.Courses}}
+
+            <tr><td>{{.Number}}</td><td>{{.Name}}</td><td>{{.Units}}</td></tr>
+        {{end}}
+    </tbody>
+
+   </table>
+
+   {{end}}
+{{end}}
+
+</body>
+</html>

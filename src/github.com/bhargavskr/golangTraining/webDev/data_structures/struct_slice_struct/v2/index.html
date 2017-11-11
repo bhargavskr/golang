@@ -1,0 +1,23 @@
+<html>
+    <head><title>New</title></head>
+    <body>
+        <ul>    {{range .SagesList}}
+                {{$name := .Name}}
+                {{$motto := .Motto}}
+                <li>{{$name}} - {{$motto}}</li>
+                {{end }}
+
+            </ul>
+
+        <ul>    {{range .Transport}}
+                {{$name := .Make}}
+                {{$motto := .Model}}
+                 {{$doors := .Doors}}
+                <li>{{$name}} - {{$motto}} - {{$doors}}</li>
+                {{end }}
+
+            </ul>     
+
+        
+    </body>
+</html>

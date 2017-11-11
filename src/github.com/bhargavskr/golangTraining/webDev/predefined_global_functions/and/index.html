@@ -1,0 +1,32 @@
+<html>
+    <head><title>New</title></head>
+    <body>
+        <ul>    {{range .}}
+                {{$name := .Name}}
+                {{$motto := .Motto}}
+                <li>{{$name}} - {{$motto}}</li>
+                {{end }}
+
+            </ul>
+
+        Example 2
+        {{if .}}    
+        {{.}}
+        {{end}}
+
+          Example 3
+        {{range .}}    
+        {{if .Name}}
+            {{.Name}}
+        {{end}}
+        {{end}}
+
+          Example 4
+        {{range .}}    
+        {{if and .Name .Admin}}
+            {{.Name}}
+        {{end}}
+        {{end}}
+
+    </body>
+</html>

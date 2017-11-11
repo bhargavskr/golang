@@ -1,0 +1,13 @@
+<html>
+    <head><title>New</title></head>
+    <body>
+        <ul>    {{range .}}
+                {{$name := .Name}}
+                {{$motto := .Motto}}
+                <li>{{$name}} - {{$motto}}</li>
+                {{end }}
+
+            </ul>
+        
+    </body>
+</html>
